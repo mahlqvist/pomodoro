@@ -2,13 +2,13 @@
 
 echo -e "Bash version: ${BASH_VERSION%(*}\n"
 
-my_dir="${BASH_SOURCE%./*}"
+my_dir=$(pwd)
 
 echo "Number of minutes to practice: "
 
 read num_min
 
-re='^[0-9]+$'
+re='^[0-9]+?$'
 
 while ! [[ $num_min =~ $re ]]
 do
@@ -23,3 +23,4 @@ sleep $num_sec && notify-send "Well done, time for a break!"
 echo -e "Another round?\n"
 
 xdg-open "$my_dir/well_done.jpg" && exit 0
+

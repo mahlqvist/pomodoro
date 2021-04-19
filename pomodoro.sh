@@ -16,11 +16,11 @@ do
 	read num_min
 done
 
-num_sec=$(( $num_min * 60 ))
+num_sec=$(( $num_min ))
 
 sleep $num_sec && notify-send "Well done, time for a break!"
 
-echo -e "Another round?\n"
+xdg-open "$my_dir/well_done.jpg" && sleep $(( 300 )) && notify-send "Time for another round..."
 
-xdg-open "$my_dir/well_done.jpg" && exit 0
+xdg-open "$my_dir/go_again.jpg" && exit 0
 

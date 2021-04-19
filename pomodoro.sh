@@ -16,7 +16,7 @@ do
 	read num_min
 done
 
-num_sec=$(( $num_min ))
+num_sec=$(( $num_min * 60 ))
 
 sleep $num_sec && notify-send "Well done, time for a break!"
 

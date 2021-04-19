@@ -2,7 +2,7 @@
 
 echo -e "Bash version: ${BASH_VERSION%(*}\n"
 
-my_dir=$(pwd)
+img_dir=$(pwd)
 
 echo "Number of minutes to practice: "
 
@@ -20,7 +20,7 @@ num_sec=$(( $num_min * 60 ))
 
 sleep $num_sec && notify-send "Well done, time for a break!"
 
-xdg-open "$my_dir/well_done.jpg" && sleep $(( 300 )) && notify-send "Time for another round..."
+xdg-open "$img_dir/well_done.jpg" && sleep $(( 300 )) && notify-send "Time for another round?"
 
-xdg-open "$my_dir/go_again.jpg" && exit 0
+xdg-open "$img_dir/go_again.jpg" && exit 0
 

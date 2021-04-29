@@ -16,13 +16,13 @@ do
 		read num_min
 	done
 
-	num_sec=$(( $num_min * 1 ))
+	num_sec=$(( $num_min * 60 ))
 
-	sleep $num_sec && notify-send "Well done, time for a break!"
+	sleep $num_sec && notify-send "Time for a 5 min break!"
 
 	xdg-open "$img_dir/well_done.jpg"
 	
-	sleep 3 && xdg-open "$img_dir/go_again.jpg"
+	sleep 300 && xdg-open "$img_dir/go_again.jpg"
 
 	echo "Another round [y] or [n]"
 	read ans

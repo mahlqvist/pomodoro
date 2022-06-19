@@ -1,3 +1,3 @@
 # Pomodoro Timer
 
-A pomodoro timer to build focus and strengthen your attention
+A very simple pomodoro timer to build focus and strengthen your attention

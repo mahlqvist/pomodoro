@@ -5,7 +5,7 @@ import ctypes
 import time
 
 def pomodoro():
-    print("Lets build som focus!\n")
+    print("Lets build some focus!\n")
     num_min = input("Number of minutes to practice: ")
 
     while True:
@@ -15,7 +15,7 @@ def pomodoro():
         num_min = input("Please enter a number: ")
 
     title = "Pomodoro"
-    msg = "Time for a 5 min break!"
+    msg = "Time for a well-deserved break!"
     time.sleep(num_sec)
 
     if os.name == 'nt' or sys.platform == 'win32':
@@ -24,5 +24,14 @@ def pomodoro():
     else:
         os.system(f"notify-send {title} {msg}")
 
-pomodoro()
+def practice():  
+    while True:
+        ans = input("\nWould you like to practice, press Y or N: ")
+        if ans.lower()[0] == "y":
+            pomodoro()
+        else:
+            print("Goodbye")
+            break
+
+practice()
 sys.exit()

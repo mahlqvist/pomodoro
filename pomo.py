@@ -18,11 +18,11 @@ def pomodoro():
     msg = "Time for a well-deserved break!"
     time.sleep(num_sec)
 
-    if os.name == 'nt' or sys.platform == 'win32':
+    if os.name == 'posix':
+        os.system(f"notify-send {title} '{msg}'")
+    elif os.name == 'nt' or sys.platform == 'win32':
         message_box = ctypes.windll.user32.MessageBoxW
         message_box(None, msg, title, 0x00001000)
-    else:
-        os.system(f"notify-send {title} {msg}")
 
 def practice():  
     while True:
